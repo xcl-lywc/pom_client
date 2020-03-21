@@ -1,0 +1,62 @@
+/*************** 中央精神 *************/
+<template>
+  <div class="content-wrap"> 
+    <div class="content-wrap-box">
+      <el-card class="content-title-card" shadow="never">
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item :to="{ name: 'mainFunctionHome' }">首页</el-breadcrumb-item>  
+          <el-breadcrumb-item>系统设置</el-breadcrumb-item>
+          <el-breadcrumb-item>中央精神</el-breadcrumb-item>
+        </el-breadcrumb>
+      </el-card>
+      <div class="theme-main">
+        <article-list requestUrl="centre"></article-list>
+      </div>
+    </div>
+  </div> 
+</template>
+
+<script>
+  import ArticleList from '../components/ArticleList' 
+  export default {
+    data() {
+      return { 
+      }
+    },
+    components: {  
+      ArticleList
+    },
+    watch: {
+    },
+    created () {
+    },
+    mounted() {
+    },
+    methods: {
+    },
+  }
+</script>
+
+<style scoped lang="less"> 
+  .el-menu{
+    border-right: none!important;
+    width: 250px;
+  }
+  .article-box{
+    .title{
+      display: inline-block;
+      width: calc(100% - 100px);
+      padding-right: 40px;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .date{
+      display: inline-block;
+      color: #ccc;
+      position: relative;
+      top: -4px;
+    }
+  }
+</style>

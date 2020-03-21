@@ -1,0 +1,664 @@
+/*基础样式*/
+body {
+  margin: 0;
+  font-family: "微软雅黑";
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 14px;
+  font-weight: normal;
+}
+h1, h2, h3, h4, h5, ul, li {
+  padding: 0;
+  margin: 0;
+}
+p, span, strong, i {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+/*滚动条样式*/
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{  
+  width: 8px;
+  height: 8px;
+  background-color: #F5F5F5;
+}  
+  
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+  background-color: #949494;
+}
+.backgroundFFF{
+  background: #fff;
+}
+.display-none{
+  display: none;
+}
+.display-flex{
+  display: flex;
+}
+.inline-flex{
+  display: inline-flex;
+}
+.pad0{
+  padding: 0;
+}
+.width-percentage{
+  width: 100%;
+}
+.w400{
+  width: 400px;
+}
+.w100{
+  width: 100px;
+}
+.green{
+  background: #D9F1D5;
+}
+.red{
+  background: #F2CFCA;
+}
+.coloCCC{
+  color: #ccc;
+}
+.text-red{
+  color: #de1201;
+}
+.inline-block{
+  display: inline-block;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+ul li{
+	list-style: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none!important;
+}
+.mar20{
+  margin: 20px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-primary {
+  color: #409EFF;
+}
+.text-success {
+  color: #67C23A;
+}
+.text-warning {
+  color: #E6A23C;
+}
+.text-danger {
+  color: #F56C6C!important;
+}
+.text-info {
+  color: #909399!important;
+}
+.text-black {
+  color: #303133!important;
+}
+/* 淡化 */
+.text-dim{ 
+  color: #999999;
+}
+.overflow-hidden{
+  overflow:hidden;
+} 
+.pad5{
+  padding: 5px !important;
+}
+.pad10{
+  padding: 10px;
+}
+.padb10{
+  padding-bottom: 10px;
+}
+.pad20{
+  padding: 20px;
+} 
+.padl20{
+  padding-left: 20px;
+}
+.padr20{
+  padding-right: 20px;
+}
+.padt20{
+  padding-top: 20px;
+}
+.padb20{
+  padding-bottom: 20px;
+}
+.padb0{
+  padding-bottom: 0!important;
+}
+.mar5{
+  margin:5px;
+}
+.mar10{
+  margin:10px!important;
+}
+.mart10{
+  margin-top: 10px;
+} 
+.marb10{
+  margin-bottom: 10px;
+}
+.marl10{
+  margin-left: 10px;
+}
+.marr10{
+  margin-right: 10px;
+}
+.mar15{
+  margin:15px!important;
+}
+.mart15{
+  margin-top: 15px;
+} 
+.marb15{
+  margin-bottom: 15px;
+}
+.marl15{
+  margin-left: 15px;
+}
+.marr15{
+  margin-right: 15px;
+}
+.mart8{
+  margin-top: 8px;
+}
+.marr5{
+  margin-right: 5px;
+}
+.marl5{
+  margin-left: 5px;
+}
+.mart50{
+  margin-top:50px;
+}
+.marl20{
+  margin-left: 20px;
+}
+.marr20{
+  margin-right: 20px;
+}
+.mart5{
+  margin-top: 5px;
+}
+.marb5{
+  margin-bottom: 5px!important;
+}
+.mart20{
+  margin-top:20px;
+}
+.marl20{
+  margin-left:20px;
+}
+.marl40{
+  margin-left:40px !important;
+}
+.marb20{
+  margin-bottom: 20px;
+}
+
+.single-line-overflow{ 
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+/*对话框通用样式*/
+.el-dialog__header {
+  border-bottom: 1px solid #ebeef5;
+}
+.el-dialog__footer {
+  padding-bottom: 10px;
+  border-top: 1px solid #ebeef5;
+}
+/*单行溢出文本*/
+.single-line-text-overflow{
+  overflow: hidden; //超出部分隐藏
+  white-space: nowrap; //表示不换行
+  text-overflow: ellipsis; //加省略号
+}
+
+/*多行文本溢出*/
+.multiline-text-overflow{
+  display: -webkit-box; //必须有，对象作为弹性伸缩盒子模型显示
+  overflow:     hidden;
+  text-overflow: elipsis;
+  word-break: break-all;
+  -webkit-box-orient:vertical; //伸缩盒子子元素的排列方式 
+  /*-webkit-line-clamp: 2,在需要的位置自己添加*/
+}
+
+/************************ 以下为该项目所需公用样式 ******************************/
+@titleBgColor_card: rgba(0,0,0,.03);// 卡片标题的背景色
+@titleBorderColor_card: rgba(0,0,0,.125);// 卡片标题的底边框颜色
+@headerBgColor_table:#007bff;// 表格头部背景色
+@headerColor_table:#fff;// 表格头部字体颜色
+/* 左侧导航栏 */
+.left-menu-box{
+  width: 260px;
+  height: calc(100vh - 60px);
+}
+.el-menu-vertical-demo{
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+/*垂直导航条样式调整 */
+.el-menu{
+  .el-menu-item-level-one{
+    font-weight: 600;
+    font-size:14px;
+    i:first-child{
+      font-size:16px;
+      // color:#303133;   
+    }
+  }
+  .el-submenu__title{
+    i:first-child{
+      font-size:16px; 
+      // color:#303133;   
+    }
+    span{
+      font-weight: 600;
+      font-size:14px;
+    }
+    i:last-child{
+      top: 48%;
+      font-size:16px;
+      color:black;
+    }
+  }
+  .el-menu--inline{
+    padding-left:10px;
+    li{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+/*内容*/
+.content-vertical{
+  width: calc(100% - 260px);
+}
+.content-wrap{
+  background: #e2e2e2;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+.content-wrap-box{
+  overflow: auto;
+  height: 100%;
+}
+.content-tree-box{
+  height:calc(100vh - 220px);
+  width:100%;
+}
+/*内筒标题块*/
+.content-title-card{
+  position: fixed;
+  width: 100%; 
+  z-index: 138;
+}
+
+/* 主体内容 */
+.theme-main{
+  margin-top:60px; 
+  padding: 30px;
+  box-sizing: border-box;
+  /* 卡片样式调整 */
+  .el-card{
+    border-radius: 8px;
+    border:none;
+    .el-card__header{
+      background-color: @titleBgColor_card;
+      border-bottom: 1px solid @titleBorderColor_card;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 1.625;
+      color: #333;
+      .clearfix{
+        margin:0;
+      }
+    }
+  }
+  /* tabs里面的卡片样式调整 */
+  .el-tabs{
+    .el-card{
+      border-radius: 8px;
+      border:none;
+      box-shadow:none;
+      .el-card__header{
+        background-color: #fff;
+        border-bottom: 1px solid @titleBorderColor_card;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.625;
+        color: #333;
+        .clearfix{
+          margin:0;
+        }
+      }
+    }
+  }
+  /* card里面的卡片样式调整 */
+  .el-card{
+    .el-card{
+      border-radius: 8px;
+      border: none;
+      box-shadow:none;
+      .el-card__header{
+        background-color: #fff;
+        border-bottom: 1px solid @titleBorderColor_card;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.625;
+        color: #333;
+        .clearfix{
+          margin:0;
+        }
+      }
+    }
+  }
+  /* tabs里面的卡片样式调整 */
+  .el-tabs{
+    .el-tabs{
+      border:none;
+      box-shadow:none;
+    }
+  }
+}
+
+/* tabs样式调整 */
+.el-tabs{
+  .el-tabs__item{
+    height:50px;
+    padding: 0 30px;
+    line-height:50px;
+  }
+}
+.el-tabs--border-card > .el-tabs__header{
+  background-color: @titleBgColor_card;
+}
+
+/* table样式调整 */
+.el-table{
+  border-radius: 8px;
+  thead{
+    color:@headerColor_table !important;
+  }
+  th{
+    background-color:@headerBgColor_table !important;
+  }
+}
+
+/* collapse样式调整 */
+.el-collapse{
+  .el-collapse-item__header{
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+/* dialog样式调整 */
+.el-dialog{
+  border-radius:8px;
+  .el-dialog__header{
+    background-color: @titleBgColor_card;
+    border-bottom: 1px solid @titleBorderColor_card;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #666;
+  }
+  .el-dialog__body{
+    padding: 20px;
+    max-height:65vh;
+    overflow:auto;
+  }
+  .el-dialog__footer{
+    background-color: @titleBgColor_card;
+    border-top: 1px solid @titleBorderColor_card;
+  }
+  .el-table{
+    border-radius: 8px;
+    thead{
+      color:#909399 !important;
+    }
+    th{
+      background-color:#fff !important;
+    }
+  }
+}
+
+/* card块头上的按钮 */
+.el-card-head-btn{
+  float: right; 
+  padding: 3px 0
+}
+/* card 标题上面的按钮有边框时 */
+.el-card-have-border-span{
+  position: relative;
+  top: 7px;
+}
+/* /* card块的clearfix */
+.el-card__header .clearfix>span{
+  font-size: 16px!important;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
+
+/* 搜索块 */
+.search-box{
+  background: #fff;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid #EBEEF5;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  color: #303133;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius:8px;
+}
+/* tabs下的搜索块 */
+.el-tabs{
+  .search-box{
+    background: #fff;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    border: none;
+    border-radius:8px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    color: #303133;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+} 
+
+/* 评论 - 人头像 */
+.comment-photo{
+  position: relative;
+  top: 5px;
+}
+/* 将所有单元格都只能显示一行，操出部分使用省略号 */
+.el-table .cell{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+/* 描述添加色块 */
+.desc-box{
+  height: 180px;
+  -webkit-line-clamp: 10;
+  background: #e2e2e2;
+  border-radius: 7px;
+  padding: 8px !important;
+  box-sizing: border-box;
+  width: 100%;
+  color: #636363;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+  line-height: 22px;
+}
+
+/* 暂无数据 */
+.no-data{
+  text-align:center;
+  width:100%;
+  line-height: 60px;
+  color: #909399;
+  font-weight: 400;
+  font-size:14px;
+  // background:#fff;
+}
+
+.append-unit{
+  background-color: #F5F7FA;
+  color: #909399;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #DCDFE6;
+  border-radius: 4px;
+  padding: 0px 20px;
+  white-space: nowrap;
+  border-left: none;
+  font-size: 14px;
+  height: 38px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom:2px;
+}
+
+.article-box{
+  .title{
+    display: inline-block;
+    width: calc(100% - 100px);
+    padding-right: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .date{
+    display: inline-block;
+    color: #ccc;
+    position: relative;
+    top: 0!important;
+  }
+}
+
+
+/* 填写自定义流程表单  样式调整 */
+.costom-form-reset-style{
+  margin-top: 0px !important;
+  .el-form{
+    padding-top: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    // max-height: 500px;
+    padding-bottom: 60px;
+    .el-form-item{
+      margin-bottom: 20px;
+    }
+    .el-form-item:last-child {
+      height:0;
+      display:none;
+      .el-button{
+        color: #FFFFFF;
+        background-color: #de1201;
+        border-color: #de1201;
+        position: relative;
+        bottom: -30px;
+        right: -400px;
+      }
+    }
+  }
+}
+.costom-form-reset-style_btnin{
+  margin-top: 0px !important;
+  .el-form{
+    padding-top: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    .el-form-item{
+      margin-bottom: 20px;
+    }
+    .el-form-item:last-child {
+      margin-top: 10px !important;
+      .el-button{
+        color: #FFFFFF;
+        background-color: #de1201;
+        border-color: #de1201;
+      }
+    }
+  }
+}
+
+/* 展示表单信息 */
+.show-form-info{
+  .el-form-item{
+    margin-bottom: 10px !important;
+  }
+}

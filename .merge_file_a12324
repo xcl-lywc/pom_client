@@ -1,0 +1,205 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+//登录
+const Login = () => import('./views/Login.vue')
+
+// 公用Index
+const Index =() => import('./views/Index.vue')
+
+// 党员
+const PartyMemberHome = () => import('./views/partyMember/Home.vue')
+const TypeArticleList = () => import('./views/partyMember/learningAssessment/TypeArticleList.vue')
+const ArticleList = () => import('./views/partyMember/learningAssessment/ArticleList.vue')
+const ArticleDetail = () => import('./views/partyMember/learningAssessment/ArticleDetail.vue') 
+// 任务管理
+const PartyMemberPresetTask = () => import('./views/partyMember/taskManagement/PresetTask.vue')
+const PartyMemberUpTask = () => import('./views/partyMember/taskManagement/UpTask.vue')
+const PartyMemberDownTask = () => import('./views/partyMember/taskManagement/DownTask.vue')
+const PartyMemberDownTaskDetail = () => import('./views/partyMember/taskManagement/DownTaskDetail.vue')
+const PartyMemberToDoList = () => import('./views/partyMember/taskManagement/ToDoList.vue')
+const PartyMemberSuperiorReminder = () => import('./views/partyMember/taskManagement/SuperiorReminder.vue')
+const PartyMemberkersOrgNotice = () => import('./views/partyMember/taskManagement/OrgNotice.vue')
+
+// 党委,党支部，党小组的页面都统一用这些
+// 根据类型不同做一些权限管理即可
+const mainFunctionHome = () => import('./views/mainFunction/Home.vue')
+const CreateArticle = () => import('./views/mainFunction/systemSetup/CreateArticle.vue')
+const mainFunctionInfo = () => import('./views/mainFunction/organizationalStructure/Info.vue')
+const mainFunctionTeamManagement = () => import('./views/mainFunction/organizationalStructure/TeamManagement.vue')
+const FunctionalDepartments = () => import('./views/mainFunction/organizationalStructure/FunctionalDepartments.vue')
+const SubordinateBranch = () => import('./views/mainFunction/organizationalStructure/SubordinateBranch.vue')
+const SubordinatePartyCommittee = () => import('./views/mainFunction/organizationalStructure/SubordinatePartyCommittee.vue')
+const PartyRoster = () => import('./views/mainFunction/organizationalStructure/PartyRoster.vue')
+const EntryApplication = () => import('./views/mainFunction/organizationalStructure/EntryApplication.vue')
+const SecretaryMailbox = () => import('./views/mainFunction/organizationalStructure/SecretaryMailbox.vue')
+
+// 系统设置
+// 文章列表
+const AnnounceArticle = () => import('./views/mainFunction/systemSetup/AnnounceArticle.vue')
+const PoliciesArticle = () => import('./views/mainFunction/systemSetup/PoliciesArticle.vue')
+const LeaderArticle = () => import('./views/mainFunction/systemSetup/LeaderArticle.vue')
+const CentreArticle = () => import('./views/mainFunction/systemSetup/CentreArticle.vue')
+const CorruptionArticle = () => import('./views/mainFunction/systemSetup/CorruptionArticle.vue')
+const CLearnArticle = () => import('./views/mainFunction/systemSetup/CLearnArticle.vue')
+const RoadArticle = () => import('./views/mainFunction/systemSetup/RoadArticle.vue')
+const StoneArticle = () => import('./views/mainFunction/systemSetup/StoneArticle.vue')
+const InstitutionArticle = () => import('./views/mainFunction/systemSetup/InstitutionArticle.vue')
+const PMLearnArticle = () => import('./views/mainFunction/systemSetup/PMLearnArticle.vue')
+const SuperiorArticle = () => import('./views/mainFunction/systemSetup/SuperiorArticle.vue')
+//文章详情
+const AnnounceArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/AnnounceArticleDetail.vue')
+const PoliciesArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/PoliciesArticleDetail.vue')
+const LeaderArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/LeaderArticleDetail.vue')
+const CentreArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/CentreArticleDetail.vue')
+const CorruptionArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/CorruptionArticleDetail.vue')
+const CLearnArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/CLearnArticleDetail.vue')
+const RoadArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/RoadArticleDetail.vue')
+const StoneArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/StoneArticleDetail.vue')
+const InstitutionArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/InstitutionArticleDetail.vue')
+const PMLearnArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/PMLearnArticleDetail.vue')
+const SuperiorArticleDetail = () => import('./views/mainFunction/systemSetup/articleDetail/SuperiorArticleDetail.vue')
+// 党费管理
+const PartyCommitteeFeesTurnRecord = () => import('./views/mainFunction/partyFeesManagement/FeesTurnRecord.vue')
+// 任务管理
+const PartyCommitteePresetTask = () => import('./views/mainFunction/taskManagement/PresetTask.vue')
+const PartyCommitteeUpTask = () => import('./views/mainFunction/taskManagement/UpTask.vue')
+const PartyCommitteeDownTask = () => import('./views/mainFunction/taskManagement/DownTask.vue')
+const PartyCommitteeDownTaskDetail = () => import('./views/mainFunction/taskManagement/DownTaskDetail.vue')
+const PartyCommitteeToDoList = () => import('./views/mainFunction/taskManagement/ToDoList.vue')
+const PartyCommitteeSuperiorReminder = () => import('./views/mainFunction/taskManagement/SuperiorReminder.vue')
+const PartyCommitteeOrgNotice = () => import('./views/mainFunction/taskManagement/OrgNotice.vue')
+
+// 职工
+const StaffAndWorkersHome = () => import('./views/staffAndWorkers/Home.vue')
+// 任务管理
+const StaffAndWorkersPresetTask = () => import('./views/staffAndWorkers/taskManagement/PresetTask.vue')
+const StaffAndWorkersUpTask = () => import('./views/staffAndWorkers/taskManagement/UpTask.vue')
+const StaffAndWorkersDownTask = () => import('./views/staffAndWorkers/taskManagement/DownTask.vue')
+const StaffAndWorkersDownTaskDetail = () => import('./views/staffAndWorkers/taskManagement/DownTaskDetail.vue')
+const StaffAndWorkersToDoList = () => import('./views/staffAndWorkers/taskManagement/ToDoList.vue')
+const StaffAndWorkersSuperiorReminder = () => import('./views/staffAndWorkers/taskManagement/SuperiorReminder.vue')
+const StaffAndWorkersOrgNotice = () => import('./views/staffAndWorkers/taskManagement/OrgNotice.vue')
+
+Vue.use(Router)
+
+export default new Router({
+  mode: "history",
+  base: "/web/",
+  routes: [ 
+    { path: "/", redirect: "/login" },  
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      meta: {
+        showNav: false,
+        type: 'blank-layout'
+      }
+    },
+    //***************** 党员页面 ****************
+    {
+      path: '/partymember', 
+      name: 'PartyMemberIndex',
+      component: Index,
+      meta: {
+        showNav: true,
+        type: 'nav-layout'
+      },
+      children: [
+        {path: "", name: "PartyMemberHome", navName: '党员首页', component: PartyMemberHome, meta: {type: 'nav-layout', showNav: true }},   
+        // {path: "naarticlelist", name: "PMNAArticleList", navName: '通知公告列表', component: PMNAArticleList, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "naarticledetail/:type_id/:article_id", name: "PMNAArticleDetail", navName: '通知公告详情', component: PMNAArticleDetail, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "typearticlelist/:key_type", name: "PMTypeArticleList", navName: '文章分类列表', component: PMTypeArticleList, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "articlelist/:type_id", name: "PMArticleList", navName: '文章列表', component: PMArticleList, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "articledetail/:type_id/:article_id", name: "PMArticleDetail", navName: '政策法规详情', component: PMArticleDetail, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "articleinformation", name: "PMCollectionArticleInformation", navName: '文章资讯', component: PMCollectionArticleInformation, meta: {type: 'nav-layout', showNav: true }},
+        // {path: "collectionarticledetail/:article_id", name: "PMCollectionArticleDetail", navName: '文章详情', component: PMCollectionArticleDetail, meta: {type: 'nav-layout', showNav: true }},
+        
+        {path: "presettask", name: "PartyMemberPresetTask", navName: '预设动作', component: PartyMemberPresetTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "uptask", name: "PartyMemberUpTask", navName: '上级任务', component: PartyMemberUpTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtask", name: "PartyMemberDownTask", navName: '下级任务', component: PartyMemberDownTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtaskdetail/:id", name: "PartyMemberDownTaskDetail", navName: '下级任务-详情', component: PartyMemberDownTaskDetail, meta: {type: 'nav-layout', showNav: true }},
+        {path: "todolist", name: "PartyMemberToDoList", navName: '待处理任务', component: PartyMemberToDoList, meta: {type: 'nav-layout', showNav: true }},
+        {path: "superiorreminder", name: "PartyMemberSuperiorReminder", navName: '上级通知', component: PartyMemberSuperiorReminder, meta: {type: 'nav-layout', showNav: true }},
+        {path: "orgnotice", name: "StaffAndWorkersOrgNotice", navName: '下级通知', component: StaffAndWorkersOrgNotice, meta: {type: 'nav-layout', showNav: true }},
+      ]
+    },
+    //***************** 党委，党支部，党小组页面 ****************
+    {
+      path: '/mainFunction', 
+      name: 'mainFunctionIndex',
+      component: Index,
+      meta: {
+        showNav: true,
+        type: 'nav-layout'
+      },
+      children: [
+        {path: "", name: "mainFunctionHome", navName: '党委首页', component: mainFunctionHome, meta: {type: 'nav-layout', showNav: true }},
+        {path: "createarticle/:article_id/:article_type", name: "CreateArticle", navName: '上传文件', component: CreateArticle, meta: {type: 'nav-layout', showNav: true }},
+        {path: "info", name: "mainFunctionInfo", navName: '党委信息', component: mainFunctionInfo, meta: {type: 'nav-layout', showNav: true }},
+        {path: "teammanagement/:org_id", name: "mainFunctionTeamManagement", navName: '班子管理', component: mainFunctionTeamManagement, meta: {type: 'nav-layout', showNav: true }},
+        {path: "functionaldepartments", name: "FunctionalDepartments", navName: '职能部门', component: FunctionalDepartments, meta: {type: 'nav-layout', showNav: true }},
+        {path: "subordinatebranch", name: "SubordinateBranch", navName: '下级支部', component: SubordinateBranch, meta: {type: 'nav-layout', showNav: true }},
+        {path: "subordinatepartycommittee", name: "SubordinatePartyCommittee", navName: '下级党委', component: SubordinatePartyCommittee, meta: {type: 'nav-layout', showNav: true }},
+        {path: "partyroster", name: "PartyRoster", navName: '党员花名册', component: PartyRoster, meta: {type: 'nav-layout', showNav: true }},
+        {path: "entryapplication", name: "EntryApplication", navName: '录入申请', component: EntryApplication, meta: {type: 'nav-layout', showNav: true }},
+        {path: "secretarymailbox", name: "SecretaryMailbox", navName: '书记信箱', component: SecretaryMailbox, meta: {type: 'nav-layout', showNav: true }},
+
+        {path: "announcearticle", name: "AnnounceArticle", component: AnnounceArticle, meta: {navName: '通知公告',type: 'nav-layout', showNav: true }},
+        {path: "policiesarticle", name: "PoliciesArticle", component: PoliciesArticle, meta: {navName: '政策法规',type: 'nav-layout', showNav: true }},
+        {path: "centrearticle", name: "CentreArticle", component: CentreArticle, meta: {navName: '中央精神', type: 'nav-layout', showNav: true }},
+        {path: "leaderarticle", name: "LeaderArticle", component: LeaderArticle, meta: {navName: '领导讲话', type: 'nav-layout', showNav: true }},
+        {path: "superiorarticle", name: "SuperiorArticle", component: SuperiorArticle, meta: {navName: '上级文件', type: 'nav-layout', showNav: true }},
+        {path: "institutionarticle", name: "InstitutionArticle", component: InstitutionArticle, meta: {navName: '党建制度', type: 'nav-layout', showNav: true }},
+        {path: "roadarticle", name: "RoadArticle", component: RoadArticle, meta: {navName: '学习路上', type: 'nav-layout', showNav: true }},
+        {path: "corruptionarticle", name: "CorruptionArticle", component: CorruptionArticle, meta: {navName: '反腐倡廉', type: 'nav-layout', showNav: true }},
+        {path: "stonearticle", name: "StoneArticle", component: StoneArticle, meta: {navName: '他山之石', type: 'nav-layout', showNav: true }},
+        {path: "pmlearnarticle", name: "PMLearnArticle", component: PMLearnArticle, meta: {navName: '党员学习', type: 'nav-layout', showNav: true }},
+        {path: "cLearnarticle", name: "CLearnArticle", component: CLearnArticle, meta: {navName: '干部学习', type: 'nav-layout', showNav: true }},
+        {path: "announcearticledetail/:article_id", name: "AnnounceArticleDetail", component: AnnounceArticleDetail, meta: {navName: '通知公告',type: 'nav-layout', showNav: true }},
+        {path: "policiesarticledetail/:article_id", name: "PoliciesArticleDetail", component: PoliciesArticleDetail, meta: {navName: '政策法规',type: 'nav-layout', showNav: true }},
+        {path: "centrearticledetail/:article_id", name: "CentreArticleDetail", component: CentreArticleDetail, meta: {navName: '中央精神', type: 'nav-layout', showNav: true }},
+        {path: "leaderarticledetail/:article_id", name: "LeaderArticleDetail", component: LeaderArticleDetail, meta: {navName: '领导讲话', type: 'nav-layout', showNav: true }},
+        {path: "superiorarticledetail/:article_id", name: "SuperiorArticleDetail", component: SuperiorArticleDetail, meta: {navName: '上级文件', type: 'nav-layout', showNav: true }},
+        {path: "institutionarticledetail/:article_id", name: "InstitutionArticleDetail", component: InstitutionArticleDetail, meta: {navName: '党建制度', type: 'nav-layout', showNav: true }},
+        {path: "roadarticledetail/:article_id", name: "RoadArticleDetail", component: RoadArticleDetail, meta: {navName: '学习路上', type: 'nav-layout', showNav: true }},
+        {path: "corruptionarticledetail/:article_id", name: "CorruptionArticleDetail", component: CorruptionArticleDetail, meta: {navName: '反腐倡廉', type: 'nav-layout', showNav: true }},
+        {path: "stonearticledetail/:article_id", name: "StoneArticleDetail", component: StoneArticleDetail, meta: {navName: '他山之石', type: 'nav-layout', showNav: true }},
+        {path: "pmlearnarticledetail/:article_id", name: "PMLearnArticleDetail", component: PMLearnArticleDetail, meta: {navName: '党员学习', type: 'nav-layout', showNav: true }},
+        {path: "cLearnarticledetail/:article_id", name: "CLearnArticleDetail", component: CLearnArticleDetail, meta: {navName: '干部学习', type: 'nav-layout', showNav: true }},
+        
+        {path: "feesturnrecord", name: "PartyCommitteeFeesTurnRecord", navName: '党费上缴记录表', component: PartyCommitteeFeesTurnRecord, meta: {type: 'nav-layout', showNav: true }},
+        {path: "presettask", name: "PartyCommitteePresetTask", navName: '预设动作', component: PartyCommitteePresetTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "uptask", name: "PartyCommitteeUpTask", navName: '上级任务', component: PartyCommitteeUpTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtask", name: "PartyCommitteeDownTask", navName: '下级任务', component: PartyCommitteeDownTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtaskdetail/:id", name: "PartyCommitteeDownTaskDetail", navName: '下级任务-详情', component: PartyCommitteeDownTaskDetail, meta: {type: 'nav-layout', showNav: true }},
+        {path: "todolist", name: "PartyCommitteeToDoList", navName: '待处理任务', component: PartyCommitteeToDoList, meta: {type: 'nav-layout', showNav: true }},
+        {path: "superiorreminder", name: "PartyCommitteeSuperiorReminder", navName: '上级通知', component: PartyCommitteeSuperiorReminder, meta: {type: 'nav-layout', showNav: true }},
+        {path: "orgnotice", name: "PartyCommitteeOrgNotice", navName: '下级通知', component: PartyCommitteeOrgNotice, meta: {type: 'nav-layout', showNav: true }},
+      ]
+      
+    }, 
+    //***************** 职工页面 ****************
+    {
+      path: '/staffandworkers', 
+      name: 'StaffAndWorkersIndex',
+      component: Index,
+      meta: {
+        showNav: true,
+        type: 'nav-layout'
+      },
+      children: [
+        {path: "", name: "StaffAndWorkersHome", navName: '职工首页', component: StaffAndWorkersHome, meta: {type: 'nav-layout', showNav: true }},
+
+        {path: "presettask", name: "StaffAndWorkersPresetTask", navName: '预设动作', component: StaffAndWorkersPresetTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "uptask", name: "StaffAndWorkersUpTask", navName: '上级任务', component: StaffAndWorkersUpTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtask", name: "StaffAndWorkersDownTask", navName: '下级任务', component: StaffAndWorkersDownTask, meta: {type: 'nav-layout', showNav: true }},
+        {path: "downtaskdetail/:id", name: "StaffAndWorkersDownTaskDetail", navName: '下级任务-详情', component: StaffAndWorkersDownTaskDetail, meta: {type: 'nav-layout', showNav: true }},
+        {path: "todolist", name: "StaffAndWorkersToDoList", navName: '待处理任务', component: StaffAndWorkersToDoList, meta: {type: 'nav-layout', showNav: true }},
+        {path: "superiorreminder", name: "StaffAndWorkersSuperiorReminder", navName: '上级通知', component: StaffAndWorkersSuperiorReminder, meta: {type: 'nav-layout', showNav: true }},
+        {path: "orgnotice", name: "StaffAndWorkersOrgNotice", navName: '下级通知', component: StaffAndWorkersOrgNotice, meta: {type: 'nav-layout', showNav: true }},
+      ]
+    },
+    
+  ]
+})
